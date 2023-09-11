@@ -681,7 +681,7 @@ wxPanel* GeneralSettings2::AddAccountPage(wxNotebook* notebook)
 		content->Add(m_delete_account, 0, wxEXPAND | wxALL | wxALIGN_RIGHT, 5);
 		m_delete_account->Bind(wxEVT_BUTTON, &GeneralSettings2::OnAccountDelete, this);
 
-		wxString choices[] = { _("Nintendo"), _("Pretendo"), _("Custom") };
+		wxString choices[] = { _("Nintendo"), _("NoNameVerse"), _("Custom") };
 		m_active_service = new wxRadioBox(online_panel, wxID_ANY, _("Network Service"), wxDefaultPosition, wxDefaultSize, std::size(choices), choices, 3, wxRA_SPECIFY_COLS);
 		if (!NetworkConfig::XMLExists())
 			m_active_service->Enable(2, false);
